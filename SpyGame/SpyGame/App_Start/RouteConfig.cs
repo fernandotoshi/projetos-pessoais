@@ -16,7 +16,7 @@ namespace SpyGame
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Jogo", action = "IniciarAplicacao", id = UrlParameter.Optional }
             );
         }
     }

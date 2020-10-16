@@ -1,0 +1,28 @@
+﻿@model IEnumerable<SpyGame.Models.BancoDeDados>
+@{
+    ViewBag.Title = "MostraBancoDeDados";
+}
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>IdLocal</th>
+            <th>NomeLocal</th>
+            <th>IdPersonagem</th>
+            <th>NomePersonagem</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var objeto in Model)
+        {
+            <tr>
+                <td>@objeto.IdLocal</td>
+                <td>@objeto.NomeLocal</td>
+                <td>@objeto.IdPersonagem</td>
+                <td>@objeto.NomePersonagem</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Html.ActionLink("Voltar Home", "Home", null, new { @class = "btn btn-primary" })

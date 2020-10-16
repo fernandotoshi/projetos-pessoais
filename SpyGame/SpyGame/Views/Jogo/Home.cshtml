@@ -1,0 +1,21 @@
+﻿@model SpyGame.Models.JogoModels
+@{
+    ViewBag.Title = "Home";
+}
+
+@using (Html.BeginForm("JogoIniciado", "Jogo", FormMethod.Post))
+{
+    <div>
+        <label>Quantidade de jogadores:</label>
+        @Html.TextBoxFor(model => model.QuantidadeJogadores)
+    </div>
+    <div>
+        <label>Quantidade de espiões:</label>
+        @Html.TextBoxFor(model => model.QuantidadeEspioes)
+    </div>
+    <div>
+        <input type="submit" value="Jogar!" class="btn btn-primary"/>
+    </div>
+}
+
+@Html.ActionLink("Ver banco de dados", "MostraBancoDeDados", null, new { @class = "btn btn-primary" })
